@@ -20,23 +20,27 @@
             zoom: 10,
             center: {lat: 38.438579, lng: -80.481961 }
         });
+      
+      function place_marker(){
+       zombie_map.addListener('click', function(e) {
+  var location = e.latLng;
+  place_marker(location);
+});
+        
+        function place_marker(location){
+    var marker = new google.maps.Marker({
+      position: {lat: 52.206727, lng: 0.124450 },
+      map: zombie_map
+    });
+}
+
+}
     
      var marker = new google.maps.Marker({
   position: {lat: 38.438579, lng: -80.481961 },
   map: zombie_map
 });
 
-     zombie_map.addListener('click', function(e) {
-  var location = e.latLng;
-  place_marker(location);
-});
-      
- 
-      
-      var marker = new google.maps.Marker({
-        position: location,
-        map: zombie_map,
-      });
       
     }
       
