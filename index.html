@@ -12,6 +12,13 @@
   <body>
     My zombie map
 <div id="zombie_map"></div>
+    <form>
+      Select an emoji
+<select id="icon_to_use">
+  <option value="zombie.png">Zombie</option>
+  <option value="hospital.png">Hospital</option>
+</select>
+</form>
     <script>
     var zombie_map;
     function initMap() {
@@ -26,10 +33,11 @@
 });
     }
       function place_marker(location){
-        
+        var emoji = document.getElementById('***').value;
     var marker = new google.maps.Marker({
       position: location,
-      map: zombie_map
+      map: zombie_map,
+      icon: emoji
     });
         
 }
