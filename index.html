@@ -22,7 +22,6 @@
     <script>
     var zombie_map;
     function initMap() {
-var emoji = document.getElementById('icon_to_use').value;
             zombie_map = new google.maps.Map(document.getElementById('zombie_map'), {
             zoom: 10,
             center: {lat: 52.206727, lng: 0.124450}
@@ -33,7 +32,7 @@ var emoji = document.getElementById('icon_to_use').value;
 });
     }
       function place_marker(location){
-        var emoji = document.getElementById('***').value;
+        var emoji = document.getElementById('icon_to_use').value;
     var marker = new google.maps.Marker({
       position: location,
       map: zombie_map,
