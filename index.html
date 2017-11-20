@@ -22,14 +22,16 @@
         });
       zombie_map.addListener('click', function(e) {
   var location = e.latLng;
-  place_marker();
+  place_marker(location);
 });
     }
       function place_marker(location){
+        
     var marker = new google.maps.Marker({
       position: location,
       map: zombie_map
     });
+        
 }
 </script>
     <script async defer
