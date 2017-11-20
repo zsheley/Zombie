@@ -26,7 +26,9 @@
   position: {lat: 52.206727, lng: 0.124450 },
   map: zombie_map
 });
-
+zombie_map.addListener('click', function(e) {
+  place_marker();
+});
 }
      
 </script>
