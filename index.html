@@ -20,10 +20,19 @@
             zoom: 10,
             center: {lat: 52.206727, lng: 0.124450}
         });
+      zombie_map.addListener('click', function(e) {
+  place_marker();
+});
     }
+      function place_marker(){
+      var marker = new google.maps.Marker({
+  position: {lat: 52.206727, lng: 0.124450 },
+  map: zombie_map
+});
+      }
 </script>
     <script async defer
-   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXZyGP2r9HSFynIGbdFmCamofy-Isd094&callback=initMap">
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8X18kFX_tGt7bHEtxGTsi1pSDYCYJrks&callback=initMap">
  </script>
   </body>
 </html>
